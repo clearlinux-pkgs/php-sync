@@ -4,7 +4,7 @@
 #
 Name     : php-sync
 Version  : 1.1.1
-Release  : 2
+Release  : 3
 URL      : https://pecl.php.net//get/sync-1.1.1.tgz
 Source0  : https://pecl.php.net//get/sync-1.1.1.tgz
 Summary  : No detailed summary available
@@ -27,6 +27,7 @@ lib components for the php-sync package.
 
 %prep
 %setup -q -n sync-1.1.1
+cd %{_builddir}/sync-1.1.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -45,4 +46,4 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20180731/sync.so
+/usr/lib64/extensions/no-debug-non-zts-20190902/sync.so
