@@ -4,7 +4,7 @@
 #
 Name     : php-sync
 Version  : 1.1.2
-Release  : 11
+Release  : 12
 URL      : https://pecl.php.net/get/sync-1.1.2.tgz
 Source0  : https://pecl.php.net/get/sync-1.1.2.tgz
 Summary  : No detailed summary available
@@ -34,8 +34,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 phpize
-autoupdate
-%configure
+%configure --disable-static
 make  %{?_smp_mflags}
 
 %install
