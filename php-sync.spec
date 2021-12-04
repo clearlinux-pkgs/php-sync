@@ -4,7 +4,7 @@
 #
 Name     : php-sync
 Version  : 1.1.2
-Release  : 12
+Release  : 13
 URL      : https://pecl.php.net/get/sync-1.1.2.tgz
 Source0  : https://pecl.php.net/get/sync-1.1.2.tgz
 Summary  : No detailed summary available
@@ -46,4 +46,4 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20200930/sync.so
+/usr/lib64/extensions/no-debug-non-zts-20210902/sync.so
