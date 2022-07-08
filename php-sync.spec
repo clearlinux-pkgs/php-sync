@@ -4,7 +4,7 @@
 #
 Name     : php-sync
 Version  : 1.1.2
-Release  : 14
+Release  : 15
 URL      : https://pecl.php.net/get/sync-1.1.2.tgz
 Source0  : https://pecl.php.net/get/sync-1.1.2.tgz
 Summary  : No detailed summary available
