@@ -4,13 +4,14 @@
 #
 Name     : php-sync
 Version  : 1.1.2
-Release  : 28
+Release  : 29
 URL      : https://pecl.php.net/get/sync-1.1.2.tgz
 Source0  : https://pecl.php.net/get/sync-1.1.2.tgz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
 Requires: php-sync-lib = %{version}-%{release}
+Requires: php-sync-license = %{version}-%{release}
 BuildRequires : buildreq-php
 
 %description
@@ -20,9 +21,18 @@ CubicleSoft PHP Extension:  Synchronization Objects (sync)
 %package lib
 Summary: lib components for the php-sync package.
 Group: Libraries
+Requires: php-sync-license = %{version}-%{release}
 
 %description lib
 lib components for the php-sync package.
+
+
+%package license
+Summary: license components for the php-sync package.
+Group: Default
+
+%description license
+license components for the php-sync package.
 
 
 %prep
@@ -38,6 +48,8 @@ phpize
 make  %{?_smp_mflags}
 
 %install
+mkdir -p %{buildroot}/usr/share/package-licenses/php-sync
+cp %{_builddir}/sync-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/php-sync/ecfd41d79faa61324c023968e6a2e56b968201c1
 %make_install
 
 
@@ -46,4 +58,8 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20210902/sync.so
+/usr/lib64/extensions/no-debug-non-zts-20220829/sync.so
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/php-sync/ecfd41d79faa61324c023968e6a2e56b968201c1
