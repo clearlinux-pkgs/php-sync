@@ -7,7 +7,7 @@
 #
 Name     : php-sync
 Version  : 1.1.3
-Release  : 52
+Release  : 53
 URL      : https://pecl.php.net/get/sync-1.1.3.tgz
 Source0  : https://pecl.php.net/get/sync-1.1.3.tgz
 Summary  : No detailed summary available
